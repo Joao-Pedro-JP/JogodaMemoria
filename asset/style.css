@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.textMemoria {
+  color: #ff0000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+  transition: 0, 5s;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.281);
+  transform: translateY( 0px);
+  border-radius: 10px;
+  
+}
+
+.textMemoria :hover {
+  color: #251313;
+  transition: 0.5s;
+  box-shadow: 0 30px 10px rgba(3, 255, 16, 0.925);
+  transform: translateY(-5px);
+  border-radius: 10px;
+}
+
+.JPF {
+  font-family: monospace;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: 2s;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.281);
+  border-radius: 20px;
+  transform: translateY(0px);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 10px rgba(3, 255, 16, 0.925);
+    border-radius: 20px;
+  }
+
+}
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.flipped {
+  background-color: #2ecc71;
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: #f1c40f;
+}
+#restart-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+#restart-btn:hover {
+  background-color: #c0392b;
+}
+
+.card-text {
+  display: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card.flipped .card-text {
+  display: block;
+}
